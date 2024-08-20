@@ -6,3 +6,5 @@ Install IONIC : sudo npm install -g @ionic/cli
 Creat Project : sudo ionic start ionic1App tabs --type vue
 Masuk Ke dalam folder Project
 Run Project : sudo ionic serve  
+------------------------------
+install semver untuk menjalankan app : npm install -g @ionic/lab semver
