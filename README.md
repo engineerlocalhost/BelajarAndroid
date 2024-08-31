@@ -16,7 +16,7 @@ Install NODjs : https://nodejs.org/en/download/prebuilt-installer
 Cek version nodejs dan npm yang sudah terinstall : node -v atau npm -v
 Install VUE : npm install -g @vue/cli 
 Install IONIC : npm install -g @ionic/cli 
-Creat Project : ionic start ionic1App tabs --type vue
+Creat Project : ionic start [Project Name] tabs --type vue
 Masuk Ke dalam folder Project
 Run Project : ionic serve  
 ------------------------------
