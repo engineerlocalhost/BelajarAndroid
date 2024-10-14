@@ -21,3 +21,6 @@ Masuk Ke dalam folder Project
 Run Project : ionic serve  
 ------------------------------
 install semver untuk menjalankan app : npm install -g @ionic/lab semver
+
+============================
+Disable no-sanbox vscode : code --no-sandbox --disable-gpu-sandbox --user-data-dir=/root/.vscode/
