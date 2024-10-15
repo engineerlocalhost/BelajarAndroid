@@ -1,39 +1,44 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import Example from '/home/kali/kampus/BelajarAndroid/tugas1App/src/components/ExploreContainer.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/home',
   },
   {
-    path: '/tabs/',
-    component: TabsPage,
+    path: '/',
+    component: Example,
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/home',
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
+        path: 'home',
+        component: () => import('/home/kali/kampus/BelajarAndroid/tugas1App/src/views/HomePage.vue'),
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
+        path: 'radio',
+        component: () => import('/home/kali/kampus/BelajarAndroid/tugas1App/src/views/RadioPage.vue'),
       },
       {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
-      }
-    ]
-  }
-]
+        path: 'library',
+        component: () => import('/home/kali/kampus/BelajarAndroid/tugas1App/src/views/LibraryPage.vue'),
+      },
+      {
+        path: 'search',
+        component: () => import('/home/kali/kampus/BelajarAndroid/tugas1App/src/views/SearchPage.vue'),
+      },
+    ],
+  },
+];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes
-})
+  // Use: createWebHistory(process.env.BASE_URL) in your app
+  history: createWebHistory(),
+  routes,
+});
 
-export default router
+export default router;
