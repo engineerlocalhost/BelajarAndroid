@@ -1,9 +1,22 @@
 <template>
   <div id="app">
     <h1>Menampilkan Nilai 1 sampai 50</h1>
-    <ul>
-      <li v-for="number in numbers" :key="number">{{ number }}</li>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Nilai</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(number, index) in numbers" :key="number">
+          <td>{{ index + 1 }}</td> <!-- Tampilkan nomor urut -->
+          <td>{{ number }}</td>   <!-- Tampilkan nilai dari 1 sampai 50 -->
+          <td></td>               <!-- Keterangan -->
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -11,7 +24,7 @@
 export default {
   data() {
     return {
-      // Menginisialisasi array numbers dengan nilai dari 1 sampai 50
+      // Inisiai array numbers dengan nilai dari 1 sampai 50
       numbers: Array.from({ length: 50 }, (_, i) => i + 1),
     };
   },
@@ -19,17 +32,36 @@ export default {
 </script>
 
 <style>
-/* Anda bisa menambahkan styling di sini jika diperlukan */
 h1 {
   text-align: center;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+
+table {
+  margin: 0 auto; 
+  border-collapse: collapse; 
+  width: 50%;
 }
-li {
-  margin: 5px 0;
-  font-size: 20px;
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: center; 
+  padding: 8px; 
+}
+
+th {
+  background-color: #ff5722; 
+  color: white; 
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+tr:nth-child(odd) {
+  background-color: #fff; 
+}
+
+tr:hover {
+  background-color: #e0e0e0;
 }
 </style>
