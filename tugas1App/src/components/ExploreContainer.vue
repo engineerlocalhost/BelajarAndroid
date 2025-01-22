@@ -5,17 +5,17 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home" href="/home">
           <ion-icon :icon="playCircle" />
-          <ion-label>Listen now</ion-label>
+          <ion-label>Home</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="radio" href="/radio">
           <ion-icon :icon="radio" />
-          <ion-label>Radio</ion-label>
+          <ion-label>Profile</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="library" href="/library">
           <ion-icon :icon="library" />
-          <ion-label>Library</ion-label>
+          <ion-label>Download</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="search" href="/search">
